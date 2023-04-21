@@ -1,0 +1,17 @@
+.location {
+    background: rgba(0, 0, 0, 0);
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 450px;
+    position: fixed;
+    left: 50%;
+    top: 3%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.zone {
+    color: rgb(195, 195, 195);
+}
