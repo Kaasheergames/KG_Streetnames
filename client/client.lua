@@ -118,23 +118,22 @@ Citizen.CreateThread(function()
             heading     = headingl,
             zone2       = zonename,
         })
-
-        RegisterCommand('togglestreetnames', function()
-            if inVehicle then
-                if wantsStreetNames then
-                    wantsStreetNames = false
-                    ESX.ShowNotification(_U('togglefalse'))
-                    hideUI()
-                else
-                    wantsStreetNames = true
-                    showUI()
-                    ESX.ShowNotification(_U('toggletrue'))
-                end
-            else
-                ESX.ShowNotification(_U('novehicle'))
-            end
-        end)
-        TriggerEvent('chat:addSuggestion', '/togglestreetnames', _U('commandtext'))
     end
 end)
 
+RegisterCommand('togglestreetnames', function()
+    if inVehicle then
+        if wantsStreetNames then
+            wantsStreetNames = false
+            ESX.ShowNotification(_U('togglefalse'))
+            hideUI()
+        else
+            wantsStreetNames = true
+            showUI()
+            ESX.ShowNotification(_U('toggletrue'))
+        end
+    else
+        ESX.ShowNotification(_U('novehicle'))
+    end
+end)
+TriggerEvent('chat:addSuggestion', '/togglestreetnames', _U('commandtext'))
